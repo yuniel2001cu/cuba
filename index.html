@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Website under maintenance</title>
+ <title>Página web en mantenimiento</title>
  <meta charset="utf-8"/>
- <meta name="description" content="Practical example of applying fixed positioning"/>
- <meta name="author" content="Yuniel Garcia Perdomo"/>
+ <meta name="description" content="Ejemplo práctico de aplicación del posicionamiento fijo"/>
+ <meta name="author" content="francesc ricart"/>
  <style>
   /*TIPOGRAFÍAS*/  @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
   /*INICIALIZACIÓN DE ESTILOS*/  *{
@@ -53,7 +53,41 @@
   <h1>Website under maintenance</h1>
   <p>Sorry, we have not found a more original message to tell you that we are working on it.</p>
   <h2>Web available at:</h2>
-  <p class="casio" id="reloj">00:00:00</p>
+  <div id="countdown"></div>
+<script>
+var end = new Date('12/31/2020 9:30 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown').innerHTML = days + ' days, ';
+        document.getElementById('countdown').innerHTML += hours + ' hours, ';
+        document.getElementById('countdown').innerHTML += minutes + ' minutes and ';
+        document.getElementById('countdown').innerHTML += seconds + ' seconds';
+    }
+
+    timer = setInterval(showRemaining, 1000);
+</script>
  </div>
+
 </body>
 </html>
+
