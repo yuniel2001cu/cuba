@@ -17,7 +17,7 @@
 
   /*PERSONALIZACIÓN DE P.MANTENIMIENTO*/  .mantenimiento{
    width:600px;
-   height:550px;
+   height:500px;
    padding:32px;
    border:1px solid #000;
    border-radius:10px;
@@ -50,7 +50,12 @@
    font-style:italic;
    color:#00FF00;
   }
-    .mantenimiento c{
+   .mantenimiento c{
+   text-align:center;
+   margin:16px 0;
+   line-height:1.5em
+  }
+   .mantenimiento L{
    text-align:center;
    margin:16px 0;
    line-height:1.5em
@@ -70,14 +75,14 @@
 </head>
 <body>
  <div class="mantenimiento">
+
   <h1>We are working...</h1>
   
   <img alt="En Construccion" class="center" src="Image/building/JPG/website_02.jpg" width="180" height="180" border="0">
  
-  <p>We will be with you soon...</p>
-  <h2>Web available at:</h2>
-  <div id="countdown"></div>
-<script>
+  <h2>We will be with you soon...</h2>
+  <h3>Web available at:</h3>
+  <script>
 var end = new Date('09/31/2020 9:30 AM');
 
     var _second = 1000;
@@ -110,9 +115,14 @@ var end = new Date('09/31/2020 9:30 AM');
     timer = setInterval(showRemaining, 1000);
 </script>
 
+
+
 <c><footer> &copy; Copyright 2020 - Yuniel Carcia Perdomo</footer></c>
+
+
 
  </div>
 
 </body>
 </html>
+   <div  id="countdown"></div>
